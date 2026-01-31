@@ -50,7 +50,6 @@ pip install -r requirements.txt
 Endpoints
 ---------
 - `POST /predict`: accepts .PNG file type only. Returns JSON with predicted digit and confidence, e.g. `{"message":"predicted number:7,probability out of 10 numbers:0.98"}`.
-```
 
 5. Create or edit configuration flags (learning rate, epochs, batch size) in `nn_training.py` as needed.
 
