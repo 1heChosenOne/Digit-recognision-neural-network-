@@ -21,7 +21,7 @@ transformator=transforms.Compose([transforms.Grayscale(num_output_channels=1),
                                   transforms.Resize((28,28)),
                                   transforms.ToTensor()])
 
-norm_params=torch.load("norm_parameters.pth")
+norm_params=torch.load("norm_parameters.pth",map_location=torch.device('cpu'))
 global_mean=norm_params["mean"].to(device)
 global_std=norm_params["std"].to(device)
 
