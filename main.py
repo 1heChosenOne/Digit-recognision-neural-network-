@@ -12,7 +12,7 @@ app=FastAPI()
 device=torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("cuda device avaliable?:",torch.cuda.is_available())
 neuralnet=my_neural_net(input_layer=784,hl_1=128,hl_2=32,output_layer=10).to(device)
-neuralnet.load_state_dict(torch.load("neural_net_weights.pth"), map_location=torch.device('cpu'))
+neuralnet.load_state_dict(torch.load("neural_net_weights.pth",map_location=torch.device('cpu')))
 
 
 
@@ -35,5 +35,5 @@ async def get_predict(image:UploadFile):
         output=neuralnet(img_tensor)
         probs=torch.softmax(output,dim=1)
         probability,index=torch.max(probs,dim=1)
-    return {"message":f"predicted number:{index.item()},probability:{probability.item()}"}
+    return {"message":f"predicted number:{index.item()},probability out of 10 numbers:{probability.item()}"}
      
