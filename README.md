@@ -1,10 +1,10 @@
-# MNIST Local-ML Pipeline
+# Digit Recognision Neural Network
 
 Overview
 --------
-MNIST Local-ML Pipeline is a compact, self-contained example demonstrating training and inference workflows for a small neural network on the MNIST handwritten digits dataset. The repository is organized for quick experimentation and learning: it shows dataset loading, pre-processing, model training, checkpointing, and inference.
+Digit Recognision Neural Network is a compact, self-contained project demonstrating training and inference workflows for a small neural network on the MNIST handwritten digits dataset. The repository is organized for quick experimentation and learning: it shows dataset loading, pre-processing, model training, checkpointing, and inference.
 
-This project is intended for developers and learners who want a lightweight, easy-to-follow PyTorch example that runs on a local Windows machine.
+This project is intended for developers and learners who want a lightweight, easy-to-follow PyTorch project that runs on a local Windows machine.
 
 Repository Structure
 --------------------
