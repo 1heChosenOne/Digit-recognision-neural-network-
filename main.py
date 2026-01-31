@@ -35,5 +35,5 @@ async def get_predict(image:UploadFile):
         output=neuralnet(img_tensor)
         probs=torch.softmax(output,dim=1)
         probability,index=torch.max(probs,dim=1)
-    return {"message":f"predicted number:{index.item()},probability:{probability.item()}"}
+    return {"message":f"predicted number:{index.item()},probability out of 10 numbers:{probability.item()}"}
      
